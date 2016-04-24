@@ -11,6 +11,7 @@
 package com.savvasdalkitsis.butterknifeaspects.aspects;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 
 import com.shazam.android.aspects.aspects.activity.NoOpSupportActivityAspect;
 import com.shazam.android.aspects.base.activity.AspectFragmentActivity;
@@ -18,7 +19,7 @@ import com.shazam.android.aspects.base.activity.AspectFragmentActivity;
 public class ButterKnifeSupportActivityAspect extends NoOpSupportActivityAspect {
 
     @Override
-    public void onCreate(AspectFragmentActivity activity, Bundle savedInstanceState) {
+    public void onCreate(@NonNull AspectFragmentActivity activity, Bundle savedInstanceState) {
         Binder.bindTo(activity);
     }
 }

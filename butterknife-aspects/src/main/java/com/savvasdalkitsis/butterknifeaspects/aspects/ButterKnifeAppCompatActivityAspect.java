@@ -11,6 +11,7 @@
 package com.savvasdalkitsis.butterknifeaspects.aspects;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 
 import com.shazam.android.aspects.aspects.activity.NoOpAppCompatActivityAspect;
 import com.shazam.android.aspects.base.activity.AspectAppCompatActivity;
@@ -18,7 +19,7 @@ import com.shazam.android.aspects.base.activity.AspectAppCompatActivity;
 public class ButterKnifeAppCompatActivityAspect extends NoOpAppCompatActivityAspect {
 
     @Override
-    public void onCreate(AspectAppCompatActivity activity, Bundle savedInstanceState) {
+    public void onCreate(@NonNull AspectAppCompatActivity activity, Bundle savedInstanceState) {
         Binder.bindTo(activity);
     }
 }
