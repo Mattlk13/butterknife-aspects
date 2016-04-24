@@ -59,3 +59,30 @@ dependencies {
             "com.jakewharton:butterknife:7.0.1",
     )
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'butterknife-aspects'
+
+    publishedGroupId = 'com.savvasdalkitsis'
+    libraryName = 'butterknife-aspects'
+    artifact = 'butterknife-aspects'
+
+    libraryDescription = 'An aspect for the popular Android library Butterknife'
+
+    siteUrl = 'https://github.com/savvasdalkitsis/butterknife-aspects'
+    gitUrl = 'https://github.com/savvasdalkitsis/butterknife-aspects.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'savvasdalkitsis'
+    developerName = 'Savvas Dalkitsis'
+    developerEmail = 'savvas.dalkitsis@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: '../scripts/installv1.gradle'
+apply from: '../scripts/bintrayv1.gradle'

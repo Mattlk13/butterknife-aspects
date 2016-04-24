@@ -33,32 +33,39 @@ The **BindLayout** annotation accepts a layout id which it binds to the **Activi
 
 
 ### Version
-1.0.0-SNAPSHOT
+1.0.0
 
 ### Installation
 
-Note that, for now, the library is not published on a public repository like Maven Central, but will be very shortly. In the meantime you can either include it in your project as a simple module, or you can install it in a local repository by doing:
+The library is available on **JCenter**
 
-```sh
-$ git clone https://github.com/savvasdalkitsis/butterknife-aspects.git
-$ cd butterknife-aspects
-$ ./gradlew clean uploadArchives -PSNAPSHOT_REPOSITORY_URL="file:///{path_to_your_local)/.m2"
-```
-and then include it in your dependencies:
-
+- Gradle
 ```groovy
-compile 'com.savvasdalkitsis:butterknife-aspects:1.0.0-SNAPSHOT'
+compile 'com.savvasdalkitsis:butterknife-aspects:1.0.0'
 ```
 
-note that you will also need to add your local repository to your list of repositories, since the android plugin will cause the default mavenLocal() repository to point to the one provided by the Android sdk:
-
-```groovy
-repositories {
-    maven { url "${System.env.HOME}/.m2" }
-}
+- Maven:
+```xml
+<dependency>
+  <groupId>com.savvasdalkitsis</groupId>
+  <artifactId>butterknife-aspects</artifactId>
+  <version>1.0.0</version>
+</dependency>
 ```
 
 License
-----
+-------
 
-Apache 2.0
+    Copyright 2016 Savvas Dalkitsis
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
